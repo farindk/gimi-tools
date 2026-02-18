@@ -24,7 +24,7 @@ Options handled by the script:
 | Option | Description |
 |--------|-------------|
 | `--tiles` | Output per-tile geospatial coordinates (forwarded to the metadata script) |
-| `--ttl NAME` | Save the generated Turtle metadata to NAME instead of a temporary file |
+| `--ttl NAME` | Save the generated Turtle metadata to NAME instead of embedding it in the HEIF |
 | `--metadata-script FILE` | Use a custom metadata script instead of the built-in `geotiff_metadata_to_turtle.py` |
 
 All other options are forwarded to `heif-enc`.
@@ -41,7 +41,7 @@ scripts/geotiff_to_gimi.sh image.tif --tiles -q 50 -o output.heif
 # Use uncompressed image output
 scripts/geotiff_to_gimi.sh image.tif -U -o output.heif
 
-# Keep the Turtle metadata file
+# Keep the Turtle metadata file, do not embed it in the HEIF
 scripts/geotiff_to_gimi.sh image.tif --ttl metadata.ttl -o output.heif
 ```
 

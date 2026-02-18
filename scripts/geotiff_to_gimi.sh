@@ -78,6 +78,7 @@ if [ -n "$TTL_OUTPUT" ]; then
 else
     TURTLE_FILE="$(mktemp "${TMPDIR:-/tmp}/gimi-XXXXXX.ttl")"
     trap 'rm -f "$TURTLE_FILE"' EXIT
+    HEIF_ARGS+=("--embed-turtle")
 fi
 
 # Step 1: Extract RDF/Turtle metadata from the GeoTIFF.
