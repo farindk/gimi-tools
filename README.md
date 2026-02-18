@@ -5,6 +5,10 @@ GIMI = Geospatial-Intelligence (GEOINT) Imagery Media for ISR.
 GIMI is a file-format building upon HEIF for storing images, image sequences, and video together with geospatial metadata, stored as RDF in the Turtle format.
 This repository contains tools to facilitate converting between GeoTIFF and GIMI files.
 
+You will need a custom compiled `heif-enc` from the `gimi` branch in the [libheif repository](https://github.com/strukturag/libheif.git).
+Make sure that `ENABLE_EXPERIMENTAL_FEATURES` is enabled in the cmake configuration.
+
+
 ## Scripts
 
 ### geotiff_to_gimi.sh
