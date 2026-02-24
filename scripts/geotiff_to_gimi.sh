@@ -86,4 +86,4 @@ python3 "$METADATA_SCRIPT" "$INPUT_FILE" \
     ${PYTHON_ARGS[@]+"${PYTHON_ARGS[@]}"} > "$TURTLE_FILE"
 
 # Step 2: Encode the image as GIMI with the metadata.
-heif-enc "$INPUT_FILE" --turtle "$TURTLE_FILE" ${HEIF_ARGS[@]+"${HEIF_ARGS[@]}"}
+heif-enc "$INPUT_FILE" --turtle "$TURTLE_FILE" --unif --add-compatible-brand geo1 ${HEIF_ARGS[@]+"${HEIF_ARGS[@]}"}
