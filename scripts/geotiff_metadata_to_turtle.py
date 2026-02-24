@@ -133,7 +133,7 @@ def main():
         sys.exit(1)
 
     with src:
-        if args.tiles:
+        if args.tiles and src.is_tiled:
             print(emit_tiles(src, image_uuid, 0))
             for i in range(len(src.overviews(1))):
                 print(emit_tiles(src, image_uuid, i + 1))
